@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js ck</title>
+  </head>
+  <style>
+    h1{
+        text-align:center;
+
+    }
+    .box {
+      padding: 20px;
+      border: 1px solid black;
+      cursor: pointer;
+
+      width: 140px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 200px;
+    }
+  </style>
+  <body>
+    <h1>Give star rating..</h1>
+    <section>
+      <div class="box" id="one">
+        <p title="Very Bad">Abysmal</p>
+      </div>
+
+      <div class="box">
+        <p title="Bad">Subpar</p>
+      </div>
+
+      <div class="box">
+        <p title="Normal">Mediocre</p>
+      </div>
+
+      <div class="box">
+        <p title="Good">Commendable</p>
+      </div>
+
+      <div class="box">
+        <p title="Very Good">Exemplary</p>
+      </div>
+    </section>
+
+    <script>
+      let box = document.querySelectorAll(".box");
+
+      for (let i = 0; i < box.length; i++) {
+
+
+
+        document.querySelectorAll(".box")[i].addEventListener("click", () => {
+
+
+
+          for (let p = 0; p < box.length; p++) {
+            box[p].style.backgroundColor = "transparent";
+          }
+
+
+
+
+
+
+          for (let j = 0; j <=i; j++) {
+            console.log(j);
+            box[j].style.backgroundColor = "#c1fd2d";
+          }
+
+
+
+        });
+      }
+
+
+      // ----------------- for eac menthod ---------------
+    //   box.forEach((ele, index) => {
+    //     box[index].addEventListener("click", () => {
+    //       for (let i = 0; i < box.length; i++) {
+    //         box[i].style.backgroundColor = "transparent";
+    //       }
+
+    //       for (let i = 0; i <= index; i++) {
+    //         box[i].style.backgroundColor = "green";
+    //       }
+    //     });
+    //   });
+
+    //   let bgColor = window.getComputedStyle(box[i]).backgroundColor;
+    </script>
+  </body>
+</html>
